@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&family=Inter:wght@200;400;600;700;900&family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --blue :#1F4690;
+    --black :#130f40;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    --border:.2rem solid  rgba(0,0,0,.1);
+    --outline:.1rem solid rgba(0,0,0,.1);
+    --outline-hover:.2rem var(--black);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration:none;
+    text-transform:capitalize;
+    transition: all .2s linear;
+}
+
+html{
+    font-size:62.5%;
+    overflow:hidden;
+    scroll-behavior:smooth;
+    scroll-padding-top: 7rem;
+}
+body{
+    background:#eee;
+}
+.btn{
+    margin-top:1rem;
+    display:inline-block;
+    padding:.8rem 3rem;
+    font-size:1.7rem;
+    border:.2rem solid var(--black);
+    border-radius:.5rem;
+    cursor:pointer;
+    color:var(--black);
+}
+.btn:hover{
+    background-color:var(--blue);
+    color:#fff;
+}
+.header{
+    position: fixed;
+    top: 0; right: 0; left: 0;
+    z-index: 1000;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background:#fff;
+    box-shadow: var(--box-shadow);
+}
+.header .logo {
+    font-size:2.5rem;
+    font-weight:bolder;
+    color:var(--black);
+}
+.header .logo:hover {
+    color:var(--blue);
+    font-weight:bolder;
+    font-size:2.7rem;
+    transition: all .2s linear;
+}
+.header .logo i{
+    color:var(--blue);
+    margin: 0 1rem;
+    position: relative;
+    top:-5px;
+}
+.header .navbar a{
+    font-size:1.7rem;
+    margin:0 1rem;
+    color: var(--black);
+}
+.header .navbar a:hover {
+    color:var(--blue);
+    font-weight:bolder;
+    font-size:2rem;
+    transition: all .2s linear;
+}
+.header .icons div {
+    height:4.5rem;
+    width:4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background:#eee;
+    color:var(--black);
+    font-size:2rem;
+    margin-right:.3rem;
+    text-align:center;
+    cursor:pointer;
+}
+.header .icons div:hover{
+    background:var(--blue);
+    color:#eee;
+}
+#menu-btn{
+    display:none;
+}
+.header .search-form{
+    position:absolute;
+    top:110%; right:-110%;
+    width:50rem;
+    height:5rem;
+    padding:1rem 2rem;
+    background:#fff;
+    border-radius:.5rem;
+    overflow:hidden;
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    box-shadow:var(--box-shadow);
+}
+.header .search-form.active {
+    right:2rem;
+    transition: .4s linear;
+}
+.header .search-form input {
+    height:100%;
+    width:100%;
+    background:none;
+    text-transform:none;
+    font-size:1.6rem;
+    color:var(--black);
+    padding: 0 1.5rem;
+}
+.header .search-form label{
+    font-size:2.2rem;
+    padding-right:1.5rem;
+    color:var(--black);
+    cursor:pointer;
+}
+.header .search-form label:hover{
+    color:var(--blue);
+}
+.header .shopping-cart{
+    position:absolute;
+    top:110%; right:2rem;
+    padding:1rem;
+    border-radius:.5rem;
+    box-shadow:var(--box-shadow);
+    width:45rem;
+    background:#fff;
+}
+.header .shopping-cart .box{
+    display:flex;
+    align-items: center;
+    padding:0 1.5rem;
+    gap:1rem;
+    position: relative;
+    margin:1rem 0;
+}
+.header .shopping-cart .box .fa-trash{
+    font-size:2rem;
+    position:absolute;
+    top:50%; right:2rem;
+    cursor:pointer;
+    color:var(--light-color);
+    transform:translateY(-50%);
+}
+.header .shopping-cart .box .fa-trash:hover{
+    color:var(--blue);
+    font-weight:bolder;
+    font-size:2.7rem;
+    transition: all .2s linear;
+}
+.header .shopping-cart .box .content {
+    margin-left:1rem;
+}
+.header .shopping-cart .box .content h3{
+    font-size:1.7rem;
+    color:var(--black);
+    padding-bottom:1rem;
+}
+.header .shopping-cart .box .content span{
+    font-size:1.6rem;
+    color:var(--light-color);
+}
+.header .shopping-cart .box .content .quantity {
+    padding-left:1rem;
+}
+.header .shopping-cart .total{
+    font-size:2.5rem; 
+    padding:1rem 0;
+    text-align:center;
+    color:var(--black);
+}
+/* 22.12 */
