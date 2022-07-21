@@ -38,6 +38,7 @@ body{
     border-radius:.5rem;
     cursor:pointer;
     color:var(--black);
+    background:none;
 }
 .btn:hover{
     background-color:var(--blue);
@@ -139,12 +140,16 @@ body{
 }
 .header .shopping-cart{
     position:absolute;
-    top:110%; right:2rem;
+    top:110%; right:-110%;
     padding:1rem;
     border-radius:.5rem;
     box-shadow:var(--box-shadow);
     width:45rem;
     background:#fff;
+}
+.header .shopping-cart.active{
+    right:2rem;
+    transition: .4s linear;
 }
 .header .shopping-cart .box{
     display:flex;
@@ -189,4 +194,126 @@ body{
     text-align:center;
     color:var(--black);
 }
-/* 22.12 */
+.header .shopping-cart .btn {
+    display:block;
+    text-align:center;
+    margin: 1rem 0;
+}
+.header .login-form {
+    position:absolute;
+    top:110%; right:-110%;
+    width:45rem;
+    padding:1rem;
+    border-radius:.5rem;
+    box-shadow:var(--box-shadow);
+    width:45rem;
+    text-align:center;
+    background:#fff;
+}
+.header .login-form.active{
+    right:2rem;
+    transition: .4s linear;
+}
+.header .login-form h3{
+    font-size:2.5rem;
+    text-transform:uppercase;
+    color:var(--black);
+}
+.header .login-form .box {
+    margin:.7rem 0;
+    background:#eee;
+    border-radius:.5rem;
+    padding:1rem;
+    font-size:1.6rem;
+    color:var(--black);
+    text-transform:none;
+}
+.header .login-form .btn {
+    display:block;
+    margin:1rem auto;
+    width:80%;
+    }
+.header .login-form .reset-password {
+    display:flex;
+    justify-content:center;
+    font-style:italic;
+}
+.header .login-form .reset-password p{
+    font-size:1.4rem;
+    color:var(--light-color);
+}
+.header .login-form .reset-password a{
+    font-size:1.4rem;
+    margin:0 5px;
+    text-decoration:underline;
+    color:var(--blue);
+}
+.header .login-form .create-account {
+    display:flex;
+    justify-content:center;
+    font-style:italic;
+}
+.header .login-form .create-account p{
+    font-size:1.4rem;
+    color:var(--light-color);
+}
+.header .login-form .create-account a{
+    font-size:1.4rem;
+    margin:0 5px;
+    text-decoration:underline;
+    color:var(--blue);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media query */
+@media(max-width:991px) {
+    html{
+        font-size:55%
+    }
+    .header{
+        padding:2rem;
+    }
+}
+@media (max-width:768px){
+    .header .navbar {
+        position:absolute;
+        top:110%;right:-110%;
+        width:30rem;
+        box-shadow:var(--box-shadow);
+        border-radius:.5rem;
+        backround:#fff;
+    }
+    .header .navbar a {
+        font-size:2rem;
+        margin:2rem 2.5rem;
+        display:block;
+    }
+    .header .search-form {
+        width:90%;
+    }
+    .header .navbar.active {
+        right:2rem;
+        transition:.4s linear;
+    }
+    #menu-btn{
+        display:inline-block;
+    }
+}
+@media(max-width:450px) {
+    html{
+        font-size:50%
+    }
+}
