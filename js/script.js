@@ -41,10 +41,10 @@ window.onscroll = () => {
 }
 
 // swiper
-var swiper = new Swiper(".product-slider", {
+var swiper = new Swiper(".products-slider", {
     loop: true,
     spaceBetween: 20,
-    autoplay {
+    autoplay: {
         delay: 7500,
         disableOnInterection: false,
     },
